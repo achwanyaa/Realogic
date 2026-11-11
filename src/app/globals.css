@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Design tokens from the Realogic portal prototype. */
+@theme {
+  /* Realogic */
+  --color-navy: #0c1b33;
+  --color-blue: #0a4fa3;
+  --color-blue-hover: #083e80;
+  --color-blue-tint: #e8f0fb;
+  --color-page: #f5f8fc;
+  --color-line: #d3dce8;
+  --color-line-strong: #c9d4e6;
+  --color-line-soft: #eef1f6;
+  --color-ink: #1c2333;
+  --color-body: #22324f;
+  --color-muted: #3b4a63;
+  --color-available-bg: #eaf5dc;
+  --color-available: #2f5f10;
+  --color-notice-bg: #fff4db;
+  --color-notice: #5e4100;
+
+  /* Fit check and status */
+  --color-fit-green: #2e7a3c;
+  --color-fit-amber: #a35f00;
+  --color-fit-red: #b3261e;
+  --color-fit-grey: #4f5868;
+
+  /* LuxuryBoma keeps its own identity inside client portals */
+  --color-lb: #4b3a78;
+  --color-lb-deep: #3a2c60;
+  --color-lb-tint: #efebf8;
+  --color-lb-muted: #4a4560;
+
+  --font-sans: var(--font-plex), system-ui, sans-serif;
+  --font-heading: var(--font-archivo), system-ui, sans-serif;
+  --font-wordmark: var(--font-montserrat), system-ui, sans-serif;
+  --font-lb: var(--font-jakarta), system-ui, sans-serif;
+
+  --radius-chip: 3px;
+  --radius-control: 4px;
+  --radius-card: 6px;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+  font-stretch: 88%;
+}
+
+/* CAD hatch: stands in for a photo that has not been taken yet. */
+.hatch {
+  background-color: #e8edf4;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(12, 27, 51, 0.08) 0,
+    rgba(12, 27, 51, 0.08) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+
+/* Faint blueprint grid behind the hero and the map. */
+.blueprint {
+  background-image:
+    linear-gradient(rgba(10, 79, 163, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 79, 163, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
